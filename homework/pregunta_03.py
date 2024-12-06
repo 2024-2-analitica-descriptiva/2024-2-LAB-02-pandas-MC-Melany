@@ -6,6 +6,7 @@ librerias de pandas para resolver las preguntas.
 """
 
 
+import pandas as pd
 def pregunta_03():
     """
     ¿Cuál es la cantidad de registros por cada letra de la columna `c1` del
@@ -21,3 +22,7 @@ def pregunta_03():
     Name: count, dtype: int64
 
     """
+
+    Cantidadl  = pd.read_csv("files/input/tbl0.tsv", sep="\t")     
+    conteol = Cantidadl["c1"].value_counts().sort_index()
+    return conteol

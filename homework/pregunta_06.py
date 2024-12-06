@@ -6,6 +6,7 @@ librerias de pandas para resolver las preguntas.
 """
 
 
+import pandas as pd
 def pregunta_06():
     """
     Retorne una lista con los valores unicos de la columna `c4` del archivo
@@ -15,3 +16,14 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
+
+    Mayus  = pd.read_csv("files/input/tbl1.tsv", sep="\t")
+
+
+    # Obtener los valores únicos de la columna c4 en mayúsculas
+    valoresunicos =   Mayus["c4"].str.upper().unique()
+
+     # Ordenar los valores alfabéticamente
+    valoresordenados = sorted(valoresunicos)
+
+    return valoresordenados
